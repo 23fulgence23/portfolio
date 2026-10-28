@@ -75,10 +75,11 @@ export const experiences: { role: T; org: string; period: T; place: string; desc
     desc: t("Développement frontend, mise en place des processus DevOps et tests de l'application web JOB.MG.",
       "Frontend development, DevOps setup and testing of the JOB.MG web application.",
       "Fampandrosoana frontend, fametrahana ny dingana DevOps ary fitsapana ny aplikasiona web JOB.MG."),
+      link: "https://job.mg/",
   },
   {
     role: t("Développeur Full-Stack & Déploiement — Laravel & React.js", "Full-Stack Developer & Deployment — Laravel & React.js", "Mpamorona Full-Stack & Fandefasana — Laravel & React.js"),
-    org: "RAIKY — IRAKY Delivery", period: t("Depuis juin 2026", "Since Jun. 2026", "Hatramin'ny Jona 2026"), place: "Toliara", current: true,
+    org: "RAIKY — IRAKY Delivery", period: t("Depuis juin 2026", "Since Jun. 2026", "Hatramin'ny Jona 2026"), place: "Toliara",
     desc: t("Développement et déploiement d'IRAKY Delivery, application de gestion des livraisons reliant clients et coursiers, avec une PWA utilisable sur web, mobile et desktop.",
       "Development and deployment of IRAKY Delivery, a delivery management app connecting customers and couriers, with a PWA usable on web, mobile and desktop.",
       "Fampandrosoana sy fandefasana ny IRAKY Delivery, aplikasiona fitantanana fandefasana entana mampifandray ny mpanjifa sy ny mpitatitra, miaraka amin'ny PWA azo ampiasaina amin'ny web, finday ary ordinatera."),
