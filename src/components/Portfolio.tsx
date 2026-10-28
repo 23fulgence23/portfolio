@@ -114,7 +114,7 @@ function Word({ text, delay = 0 }: { text: string; delay?: number }) {
   const reduce = useReducedMotion();
   return (
     <span className="block overflow-hidden pb-[0.12em]" aria-label={text}>
-      {[...text].map((c, i) => (
+      {text.split("").map((c, i) => (
         <motion.span key={i} aria-hidden className="inline-block"
           initial={reduce ? false : { y: "115%", rotate: 7 }} animate={{ y: 0, rotate: 0 }}
           transition={{ delay: delay + i * 0.045, duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}>
