@@ -5,7 +5,44 @@
 :root { --bg: 241 245 244; --card: 255 255 255; --ink: 16 38 43; --muted: 76 100 104; --line: 205 219 218; --accent: 168 88 10; --teal: 16 112 110; }
 .dark { --bg: 10 27 32; --card: 16 40 47; --ink: 230 240 238; --muted: 148 170 172; --line: 34 62 70; --accent: 240 168 74; --teal: 70 190 184; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
 body { background: rgb(var(--bg)); color: rgb(var(--ink)); transition: background-color .25s, color .25s; }
 :focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 3px; border-radius: 6px; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+/* Photo : forme organique qui respire */
+.blob { animation: morph 9s ease-in-out infinite; }
+@keyframes morph {
+  0%, 100% { border-radius: 62% 38% 54% 46% / 52% 46% 54% 48%; }
+  50% { border-radius: 40% 60% 46% 54% / 48% 58% 42% 52%; }
+}
+
+/* Anneau lumineux autour de la photo */
+.rot { animation: rot 16s linear infinite; }
+@keyframes rot { to { transform: rotate(360deg); } }
+
+/* Lueurs de fond */
+.drift { animation: drift 16s ease-in-out infinite; }
+@keyframes drift { 50% { transform: translate3d(40px, 30px, 0) scale(1.08); } }
+
+/* Texture de grain */
+.grain { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* Halo qui suit la souris sur les cartes */
+.spot::before {
+  content: ""; position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity .3s;
+  background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 50%), rgb(var(--teal) / .18), transparent 65%);
+}
+.spot:hover::before { opacity: 1; }
+.spot > * { position: relative; }
+
+/* Pastille « en cours » */
+.pulse-ring { animation: pulse-ring 2s ease-out infinite; }
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgb(var(--accent) / .6); }
+  100% { box-shadow: 0 0 0 12px rgb(var(--accent) / 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
