@@ -7,8 +7,8 @@ const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-disp
 const body = Figtree({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata: Metadata = {
-  title: "Damivelo FULGENCE — Développeur Web & Mobile Full-Stack",
-  description: "Portfolio de Damivelo Fulgence : applications web et mobiles avec Laravel, React et Next.js.",
+  title: "FULGENCE Damivelo — Développeur Web & Mobile Full-Stack",
+  description: "Portfolio de FULGENCE Damivelo : applications web et mobiles avec Laravel, React et Next.js.",
 };
 
 const themeScript = `try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d)}catch(e){}`;

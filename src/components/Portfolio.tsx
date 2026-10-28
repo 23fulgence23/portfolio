@@ -74,7 +74,7 @@ function Header() {
   return (
     <header className="fixed inset-x-0 top-3 z-50 mx-auto w-[calc(100%-1.5rem)] max-w-5xl">
       <div className="flex h-14 items-center justify-between rounded-full border border-line bg-bg/70 px-4 shadow-lg shadow-black/5 backdrop-blur-xl">
-        <a href="#top" className="font-display text-lg font-bold tracking-tight">Damivelo<span className="text-accent">.</span></a>
+        <a href="#top" className="font-display text-lg font-bold tracking-tight">FULGENCE Damivelo<span className="text-accent">.</span></a>
         <nav className="hidden items-center gap-1 text-sm md:flex" aria-label="Navigation">
           {NAV.map(([id, label]) => (
             <a key={id} href={`#${id}`} className={`relative rounded-full px-3.5 py-1.5 transition-colors ${active === id ? "text-ink" : "text-muted hover:text-ink"}`}>
@@ -138,7 +138,7 @@ function Photo() {
         style={{ background: "conic-gradient(from 0deg, rgb(var(--accent)), transparent 40%, rgb(var(--teal)), transparent 80%, rgb(var(--accent)))", padding: 2, WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", maskComposite: "exclude" }} />
       <div className="blob relative h-full w-full overflow-hidden border border-line bg-card shadow-2xl">
         {ok ? (
-          <img src="/images/photo.jpeg" alt="Damivelo Fulgence" className="h-full w-full object-cover" onError={() => setOk(false)} />
+          <img src="/images/photo.jpeg" alt="FULGENCE Damivelo" className="h-full w-full object-cover" onError={() => setOk(false)} />
         ) : (
           <div className="grid h-full place-items-center font-display text-8xl font-bold text-teal">DF</div>
         )}
@@ -155,9 +155,9 @@ function Hero() {
     <section id="top" className="mx-auto grid min-h-[92vh] max-w-6xl items-center gap-14 px-5 pb-20 pt-32 md:grid-cols-[1.25fr_1fr]">
       <div>
         <motion.p {...fade(0.1)} className="mb-4 text-lg text-muted">{ui.hello[lang]}</motion.p>
-        <h1 className="font-display text-6xl font-extrabold leading-[0.95] tracking-tighter sm:text-8xl">
-          <Word text="Damivelo" delay={0.15} />
-          <Word text="Fulgence" delay={0.45} />
+        <h1 className="font-display text-5xl font-extrabold leading-[0.95] tracking-tighter sm:text-6xl lg:text-7xl xl:text-8xl">
+          <Word text="FULGENCE" delay={0.15} />
+          <Word text="Damivelo" delay={0.45} />
         </h1>
         <motion.p {...fade(1.0)} className="mt-6 font-display text-xl font-semibold text-teal sm:text-2xl">{ui.role[lang]}</motion.p>
         <motion.p {...fade(1.15)} className="mt-5 max-w-xl leading-relaxed text-muted">{ui.bio[lang]}</motion.p>
@@ -278,7 +278,7 @@ export default function Portfolio() {
         </Section>
       </main>
       <footer className="border-t border-line py-8 text-center text-sm text-muted">
-        © {new Date().getFullYear()} Damivelo Fulgence — {ui.rights[lang]}
+        © {new Date().getFullYear()} FULGENCE Damivelo — {ui.rights[lang]}
       </footer>
     </>
   );
